@@ -1,0 +1,24 @@
+elasticSearch:
+            host: 192.168.12.39
+            port: 9200
+            dict_index_name: english-dictionary
+            word_map_index: wordsmapping
+query:
+            simple_search_query: '{"query":{"bool":{"must":[{"term":{"world.keyword":"#WORD"}}],"must_not":[],"should":[]}},"from":0,"size":2,"sort":[],"aggs":{}}'
+            fuzzy_search_query: '{"query":{"bool":{"must":[{"fuzzy":{"world.keyword":{"value":"#WORD","max_expansions":"1.5"}}}]}},"from":0,"size":2}'
+            mapping_query: '{"query":{"bool":{"must":[{"match_all":{}}],"must_not":[],"should":[]}},"from":0,"size":10000,"sort":[],"aggs":{}}'
+
+root: '/home/uditshashankshukla/Desktop/Samples/Non-Editable/'
+
+
+
+
+
+
+
+
+
+
+
+
+
